@@ -1,0 +1,202 @@
+// ============================================
+// Auth Page (Login / Signup)
+// ============================================
+
+.auth {
+  min-height: calc(100vh - 60px);
+  @include flex-center;
+  padding: 24px 12px;
+
+  &__card {
+    @include card;
+    width: 100%;
+    max-width: 420px;
+    padding: 24px 16px;
+
+    @include tablet {
+      padding: 40px 36px;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $color-text;
+    margin-bottom: 8px;
+
+    @include tablet {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+  }
+
+  &__error {
+    background-color: rgba($color-error, 0.1);
+    border: 1px solid rgba($color-error, 0.3);
+    color: $color-error;
+    font-size: 0.8125rem;
+    padding: 10px 14px;
+    border-radius: $radius-sm;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: $color-text-muted;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    font-family: $font-family;
+    color: $color-text;
+    background-color: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    outline: none;
+    transition: $transition;
+
+    &::placeholder {
+      color: rgba($color-text-muted, 0.5);
+    }
+
+    &:focus {
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+    }
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 4px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: $color-primary;
+    border: none;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover:not(:disabled) {
+      background-color: $color-primary-dark;
+      transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0;
+    color: $color-text-muted;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: $color-border;
+    }
+  }
+
+  &__google {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__google-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: $font-family;
+    color: $color-text;
+    background-color: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover:not(:disabled) {
+      border-color: $color-text-muted;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__google-icon {
+    flex-shrink: 0;
+  }
+
+  &__toggle {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+  }
+
+  &__toggle-btn {
+    color: $color-primary;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0;
+    transition: $transition;
+
+    &:hover {
+      color: $color-primary-dark;
+      text-decoration: underline;
+    }
+  }
+}

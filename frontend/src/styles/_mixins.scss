@@ -1,0 +1,37 @@
+// ============================================
+// CipherSQLStudio - Mixins
+// ============================================
+
+// Breakpoints (mobile-first)
+@mixin tablet {
+  @media (min-width: 641px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: 1281px) {
+    @content;
+  }
+}
+
+// Flex center utility
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Card mixin
+@mixin card {
+  background-color: $color-bg-card;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  border: 1px solid $color-border;
+}

@@ -1,0 +1,119 @@
+// ============================================
+// Sample Data Viewer Component
+// ============================================
+
+.sample-data {
+  @include card;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid $color-border;
+    background-color: rgba($color-bg-light, 0.5);
+  }
+
+  &__title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $color-text-muted;
+  }
+
+  &__table-name {
+    font-size: 0.75rem;
+    font-family: $font-mono;
+    color: $color-primary;
+    background-color: rgba($color-primary, 0.1);
+    padding: 2px 10px;
+    border-radius: 20px;
+  }
+
+  &__section {
+    padding: 14px 16px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
+  }
+
+  &__section-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $color-text-muted;
+    margin-bottom: 10px;
+  }
+
+  &__schema {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__column {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: $radius-sm;
+    background-color: $color-bg;
+    border: 1px solid rgba($color-border, 0.6);
+  }
+
+  &__column-name {
+    font-family: $font-mono;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__column-type {
+    font-size: 0.7rem;
+    color: $color-text-muted;
+    text-transform: uppercase;
+  }
+
+  &__scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+  }
+
+  &__th {
+    text-align: left;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: $color-text-muted;
+    background-color: rgba($color-bg, 0.5);
+    white-space: nowrap;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__td {
+    padding: 7px 12px;
+    color: $color-text;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba($color-border, 0.4);
+    font-family: $font-mono;
+    font-size: 0.775rem;
+  }
+
+  &__tr {
+    &:last-child .sample-data__td {
+      border-bottom: none;
+    }
+  }
+}

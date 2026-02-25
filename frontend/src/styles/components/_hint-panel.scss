@@ -1,0 +1,52 @@
+// ============================================
+// Hint Panel Component
+// ============================================
+
+.hint-panel {
+  @include card;
+  border-color: rgba($color-warning, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba($color-warning, 0.06) 0%,
+    rgba($color-bg-card, 1) 100%
+  );
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba($color-warning, 0.15);
+  }
+
+  &__icon {
+    font-size: 1.1rem;
+  }
+
+  &__title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $color-warning;
+  }
+
+  &__body {
+    padding: 16px;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    color: $color-text;
+    line-height: 1.7;
+  }
+
+  &__loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: $color-text-muted;
+  }
+}

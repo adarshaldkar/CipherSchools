@@ -1,0 +1,134 @@
+// ============================================
+// Header Component
+// ============================================
+
+.header {
+  background-color: $color-secondary;
+  border-bottom: 1px solid $color-border;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: $shadow-sm;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+
+    @include tablet {
+      padding: 0 24px;
+    }
+
+    @include desktop {
+      padding: 0 32px;
+    }
+  }
+
+  &__logo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $color-text;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: $transition;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @include tablet {
+      gap: 16px;
+    }
+  }
+
+  &__link {
+    color: $color-text-muted;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 6px 8px;
+    border-radius: $radius-sm;
+    transition: $transition;
+    white-space: nowrap;
+
+    @include tablet {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+
+    &:hover {
+      color: $color-text;
+      background-color: rgba($color-primary, 0.1);
+    }
+
+    &--active {
+      color: $color-primary;
+      background-color: rgba($color-primary, 0.15);
+    }
+
+    &--auth {
+      color: $color-primary;
+      border: 1px solid rgba($color-primary, 0.4);
+
+      &:hover {
+        background-color: rgba($color-primary, 0.15);
+        border-color: $color-primary;
+      }
+    }
+
+    &--logout {
+      background: none;
+      color: $color-text-muted;
+      font-family: $font-family;
+
+      &:hover {
+        color: $color-error;
+        background-color: rgba($color-error, 0.1);
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include tablet {
+      gap: 12px;
+    }
+  }
+
+  &__user-name {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: $color-text;
+    display: none;
+
+    @include tablet {
+      display: inline;
+      font-size: 0.875rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// ============================================
+// Error Boundary Fallback
+// ============================================
+
+.error-boundary {
+  min-height: calc(100vh - 60px);
+  @include flex-center;
+  padding: 24px 12px;
+
+  &__card {
+    @include card;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $color-error;
+    margin-bottom: 12px;
+  }
+
+  &__message {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    word-break: break-word;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: $color-primary;
+    border: none;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+}

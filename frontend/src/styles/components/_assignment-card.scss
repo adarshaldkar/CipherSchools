@@ -1,0 +1,110 @@
+// ============================================
+// Assignment Card Component
+// ============================================
+
+.assignment-card {
+  @include card;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+    border-color: $color-primary;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__difficulty {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+
+    &--easy {
+      color: $color-easy;
+      background-color: rgba($color-easy, 0.15);
+    }
+
+    &--medium {
+      color: $color-medium;
+      background-color: rgba($color-medium, 0.15);
+    }
+
+    &--hard {
+      color: $color-hard;
+      background-color: rgba($color-hard, 0.15);
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: 8px;
+    line-height: 1.4;
+
+    @include tablet {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid $color-border;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: $color-primary;
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: $radius-sm;
+    text-decoration: none;
+    transition: $transition;
+    width: 100%;
+    justify-content: center;
+
+    @include tablet {
+      font-size: 0.875rem;
+      padding: 10px 20px;
+    }
+
+    &:hover {
+      background-color: $color-primary-dark;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
