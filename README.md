@@ -460,21 +460,6 @@ The platform comes with **10 pre-built SQL assignments** across three difficulty
 | 6 | 5 | 1 |
 | 7 | 5 | 3 |
 
----
-
-## 📸 Screenshots
-
-> _Add screenshots of your application here_
-
-| Page | Description |
-|---|---|
-| **Assignment List** | Grid of all 10 SQL assignments with difficulty badges |
-| **SQL Editor** | Monaco Editor with syntax highlighting + sample data viewer |
-| **Results Table** | Formatted query results with column headers |
-| **AI Hints** | Gemini-powered hint panel with contextual guidance |
-| **Login/Signup** | Authentication page with Google OAuth option |
-
----
 
 ## 🔑 Google OAuth Setup
 
